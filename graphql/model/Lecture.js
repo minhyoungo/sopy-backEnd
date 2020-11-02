@@ -1,36 +1,35 @@
 import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
-const Student = new Schema(
+
+const Lecture = new Schema(
   {
+    _id: {
+      type: String,
+      required: true,
+    },
     name: {
       type: String,
       required: true,
     },
-    age: {
+    teacher: {
+      type: String,
+      required: true,
+    },
+    lv: {
       type: Number,
       required: true,
     },
-    mobile: {
+    location: {
       type: String,
       required: true,
     },
-    school: {
-      type: String,
+    pay: {
+      type: Number,
       required: true,
     },
-    gender: {
-      type: String,
-      required: true,
-    },
-    lecture: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: `Lecture`,
-      },
-    ],
   },
   { versionKey: false }
 );
 
-export default mongoose.model(`Student`, Student, `Student`);
+export default mongoose.model(`Lecture`, Lecture, `Lecture`);

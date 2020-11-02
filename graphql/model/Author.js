@@ -1,36 +1,32 @@
 import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
-const Student = new Schema(
+
+const Author = new Schema(
   {
     name: {
       type: String,
       required: true,
     },
-    age: {
-      type: Number,
-      required: true,
-    },
-    mobile: {
+
+    birth: {
       type: String,
       required: true,
     },
-    school: {
+    company: {
       type: String,
       required: true,
     },
-    gender: {
-      type: String,
-      required: true,
-    },
-    lecture: [
+    artList: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: `Lecture`,
+        ref: `Book`,
       },
     ],
   },
-  { versionKey: false }
+  {
+    versionKey: false,
+  }
 );
 
-export default mongoose.model(`Student`, Student, `Student`);
+export default mongoose.model(`Author`, Author, `Author`);

@@ -5,8 +5,8 @@ dotenv.config();
 import { graphqlHTTP } from "express-graphql";
 import cors from "cors";
 import bodyParser from "body-parser";
-import schema from "../graphql/schemas";
 import connect from "../db/mongo";
+import schema from "../graphql/schemas";
 
 const app = express();
 

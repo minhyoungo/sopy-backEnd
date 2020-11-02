@@ -1,13 +1,10 @@
 import Lecture from "../../../model/Lecture";
-import Student from "../../../model/Student";
 
 export default {
   Query: {
-    getAllStudent: async (_, args) => {
+    getAllLecture: async (_, args) => {
       try {
-        const result = await Student.find({}, {});
-
-        console.log(result);
+        const result = await Lecture.find({}, {});
 
         return result;
       } catch (e) {
