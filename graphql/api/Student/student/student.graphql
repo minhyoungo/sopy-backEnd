@@ -1,3 +1,4 @@
 type Query {
   getAllStudent: [Student!]!
+  getStudentGte(age: Int!): [Student!]!
 }
