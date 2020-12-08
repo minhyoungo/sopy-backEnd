@@ -43,7 +43,7 @@ export default {
         return {};
       }
     },
-    searchVideoByTitle: async (_, args) => {
+    seerchVideoByTitle: async (_, args) => {
       const { sTitle } = args;
       try {
         const result = await Video.find({
