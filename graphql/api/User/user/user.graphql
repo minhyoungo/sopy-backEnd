@@ -1,0 +1,16 @@
+type Mutation {
+  registUser(
+    # 프론트와 백은 같은 조건을 유지해야한다.(MM05Qeries)
+    name: String!
+    email: String!
+    nickName: String!
+    mobile: String!
+    zoneCode: String!
+    address: String!
+    detailAddress: String!
+  ): Boolean!
+
+  tryLogin(email: String!): Boolean!
+
+  checkSecretCode(email: String!, code: String!): Boolean!
+}
